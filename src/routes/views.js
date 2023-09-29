@@ -12,7 +12,7 @@ const productsPath = path.join(__dirname, "..", "src", "productos.json");
 const productManager = new ProductManager(productsPath);
 
 const publicAccess = (req, res, next) => {
-    if (req.session.user) return res.redirect('/profile');
+    if (req.session.user) return res.redirect('/products');
     next();
 }
 
@@ -107,10 +107,10 @@ router.get('/register', publicAccess, (req, res)=> {
     res.render('register')
 })
 
-router.get('/profile', privateAccess, (req, res)=> {
-    res.render('profile', {
-        user: req.session.user,
-    })
-})
+// router.get('/profile', privateAccess, (req, res)=> {
+//     res.render('products', {
+//         user: req.session.user,
+//     })
+// })
 
 export default router;

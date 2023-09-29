@@ -6,6 +6,9 @@ import handlebars from "express-handlebars";
 import __dirname from "./utils.js";
 import viewsRoute from "./routes/views.js";
 import sessionsRouter from "./routes/sessions.js";
+import passport from 'passport';
+import { initializePassport } from './config/passport.js';
+
 import { Server } from "socket.io";
 
 import productsRouter from "./routes/products.js";
@@ -16,11 +19,13 @@ import path from "path";
 import { productsModel } from "./dao/models/products.js";
 import { messagesModel } from "./dao/models/messages.js";
 
+const urlMongo = 'mongodb+srv://CoderUser:Ag9W4iSW7LWPNtsZ@cluster0.hwubstf.mongodb.net/ecommerce'
+
 async function connectToDb() {
 	try {
 		console.log("Connecting to MongoDB ...");
 		await mongoose.connect(
-			"mongodb+srv://CoderUser:Ag9W4iSW7LWPNtsZ@cluster0.hwubstf.mongodb.net/ecommerce",
+			urlMongo,
 			{
 				useNewUrlParser: true,
 				useUnifiedTopology: true,
@@ -71,7 +76,7 @@ app.use((req, res, next) => {
 		session({
 			store: MongoStore.create({
 				mongoUrl:
-					"mongodb+srv://CoderUser:Ag9W4iSW7LWPNtsZ@cluster0.hwubstf.mongodb.net/ecommerce",
+				urlMongo,
 				ttl: 3600,
 			}),
 			secret: "CoderSecret",
@@ -79,6 +84,10 @@ app.use((req, res, next) => {
 			saveUninitialized: false,
 		})
 	);
+
+	initializePassport();
+	app.use(passport.initialize());
+	app.use(passport.session());
 
 	app.use("/", viewsRoute);
 	app.use("/api/sessions", sessionsRouter);
