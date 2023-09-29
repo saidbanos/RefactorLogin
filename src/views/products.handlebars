@@ -1,0 +1,73 @@
+<div>
+    <h1>Bienvenido</h1>
+    <p>Full Name: {{user.name}}</p>
+    <p>Email: {{user.email}}</p>
+    <p>Age: {{user.age}}</p>
+    <p>Role: {{user.role}}</p>
+</div>
+
+<button id="logoutBtn">Logout</button>
+
+<div>
+    <h1>Products</h1>
+
+    <div style="text-align: center; margin-bottom: 20px;">
+        <div>
+            <label for="cartIdInput">Cart ID:</label>
+            <input type="text" id="cartIdInput" placeholder="Enter Cart ID" style="width: 300px;">
+            <button id="goToCartBtn" style="margin-left: 10px;">Go to Cart</button>
+        </div>
+        <div id="errorMessage" style="display: none; text-align: center; color: red;">
+            Please enter a Cart ID.
+        </div>
+    </div>
+
+    <div class="pagination" style="text-align: center; font-size: 20px; font-weight: bold;">
+        {{#if pageInfo.hasPrevPage}}
+            <a href="{{pageInfo.prevLink}}" style="margin-right: 15px;">Previous</a>
+        {{/if}}
+
+        <span>Page {{pageInfo.page}} of {{pageInfo.totalPages}}</span>
+
+        {{#if pageInfo.hasNextPage}}
+            <a href="{{pageInfo.nextLink}}" style="margin-left: 15px;">Next</a>
+        {{/if}}
+    </div>
+
+    <ul>
+        {{#each products}}
+            <li>
+                <strong>Title:</strong> {{this.title}}<br>
+                <strong>ID:</strong> {{this._id}}<br>
+                <strong>Description:</strong> {{this.description}}<br>
+                <strong>Price:</strong> ${{this.price}}<br>
+                <strong>Code:</strong> {{this.code}}<br>
+                <strong>Stock:</strong> {{this.stock}}<br>
+                <strong>Status:</strong> {{this.status}}<br>
+                <strong>Category:</strong> {{this.category}}<br>
+                <strong>Thumbnails:</strong>
+                <ul>
+                    {{#each this.thumbnails}}
+                        <li><img src="{{this}}" alt="{{../this.title}} thumbnail" style="width: 50px;"></li>
+                    {{/each}}
+                </ul>
+
+                <button class="addToCartBtn" data-product-id="{{this._id}}" data-product-index="{{@index}}">Add to Cart</button>
+
+                <div class="successMessage" data-product-index="{{@index}}" style="display: none; text-align: center;">
+                    Product added to the cart successfully!
+                </div>
+            </li>
+            <br>
+            <br>
+        {{/each}}
+    </ul>
+
+</div>
+
+<div id="successMessage" style="display: none; text-align: center;">
+    Product added to the cart successfully!
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js"></script>

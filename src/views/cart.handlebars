@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <h1>Cart</h1>
+    <h2>Cart ID: {{cartData._id}}</h2>
+    
+    <ul>
+        {{#each cartData.products}}
+            <li>
+                <strong>Title:</strong> {{this.product.title}}<br>
+                <strong>ID:</strong> {{this.product._id}}<br>
+                <strong>Description:</strong> {{this.product.description}}<br>
+                <strong>Price:</strong> ${{this.product.price}}<br>
+                <strong>Code:</strong> {{this.product.code}}<br>
+                <strong>Stock:</strong> {{this.product.stock}}<br>
+                <strong>Status:</strong> {{this.product.status}}<br>
+                <strong>Category:</strong> {{this.product.category}}<br>
+                <strong>Thumbnails:</strong><br>
+                {{#each this.product.thumbnails}}
+                    <img src="{{this}}" alt="Thumbnail" style="width: 30px;"><br>
+                {{/each}}
+                <strong style="font-size: 25px;">Quantity:</strong> <strong style="font-size: 25px;">{{this.quantity}}</strong><br><br>
+            </li>
+            <br>
+        {{/each}}
+    </ul>
+</body>
+</html>

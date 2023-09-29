@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="/css/styles.css">
+
+<div>
+    <h1>Chat</h1>
+    <div>
+        Enter message: <input id="chatBox">
+    </div>
+    <br/>
+    <div id="messageLogs">
+        {{#each allMessages}}
+            <p>{{this.user}} messages:</p>
+            <ul>
+                {{#each this.messages}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        {{/each}}
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/socket.io/socket.io.js"></script>
+    <script src="/js/index.js"></script>
+<hr/>
+    <h1>Real Time Products</h1>
+
+    <h2>Delete Product</h2>
+    <form id="delete-product-form">
+        <label for="delete-id">Product ID:</label>
+        <input type="text" id="delete-id" name="product-id">
+        <input type="submit" value="Delete">
+    </form>
+
+    <h2>Add Product</h2>
+    <form id="add-product-form">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title">
+        <br/>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price">
+        <br/>
+        <label for="code">Code:</label>
+        <input type="text" id="code" name="code">
+        <br/>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description">
+        <br/>
+        <label for="stock">Stock:</label>
+        <input type="number" id="stock" name="stock">
+        <br/>
+        <label for="status">Status:</label>
+        <input type="checkbox" id="status" name="status" value="true">
+        <br/>
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category">
+        <br/>
+        <label for="thumbnails">Thumbnails (comma-separated URLs):</label>
+        <input type="text" id="thumbnails" name="thumbnails">
+        <br/>
+        <input type="submit" value="Add">
+    </form>
+
+    <ul id="product-list">
+        {{#each products}}
+            <li>
+                <strong>Title:</strong> {{this.title}}<br>
+                <strong>ID:</strong> {{this._id}}<br>
+                <strong>Description:</strong> {{this.description}}<br>
+                <strong>Price:</strong> ${{this.price}}<br>
+                <strong>Code:</strong> {{this.code}}<br>
+                <strong>Stock:</strong> {{this.stock}}<br>
+                <strong>Status:</strong> {{this.status}}<br>
+                <strong>Category:</strong> {{this.category}}<br>
+                <strong>Thumbnails:</strong>
+                <ul>
+                    {{#each this.thumbnails}}
+                        <li><img src="{{this}}" alt="{{../this.title}} thumbnail" style="width: 50px;"></li>
+                    {{/each}}
+                </ul>
+            </li>
+        {{/each}}
+    </ul>
+</div>
+
+
+<script src="/js/realTimeProducts.js"></script>

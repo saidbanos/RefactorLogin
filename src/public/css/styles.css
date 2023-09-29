@@ -1,0 +1,11 @@
+#messageLogs ul {
+	margin-bottom: 1em;
+}
+
+#messageLogs li {
+	margin-bottom: 0;
+}
+
+#messageLogs p {
+	margin: 0;
+}

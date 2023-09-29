@@ -1,0 +1,152 @@
+[
+	{
+		"id": 1692114438001,
+		"title": "Producto 1",
+		"description": "Este es el producto 1",
+		"code": "1",
+		"price": 1,
+		"status": true,
+		"stock": 1,
+		"category": "1",
+		"thumbnails": [
+			"https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-01.jpg",
+			"https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-04.jpg",
+			"https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-03.jpg"
+		]
+	},
+	{
+		"id": 1692114438002,
+		"title": "Producto 2",
+		"description": "Este es el producto 2",
+		"code": "2",
+		"price": 2,
+		"status": true,
+		"stock": 2,
+		"category": "2",
+		"thumbnails": [
+			"https://cdn.sparkfun.com//assets/parts/1/1/2/8/4/13750-01.jpg",
+			"https://cdn.sparkfun.com//assets/parts/1/1/2/8/4/13750-04.jpg",
+			"https://cdn.sparkfun.com//assets/parts/1/1/2/8/4/13750-03.jpg"
+		]
+	},
+	{
+		"id": 1692114438003,
+		"title": "Producto 3",
+		"description": "Este es el producto 3",
+		"code": "3",
+		"price": 3,
+		"status": true,
+		"stock": 3,
+		"category": "3",
+		"thumbnails": [
+			"https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-01.jpg",
+			"https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-04.jpg",
+			"https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-03.jpg"
+		]
+	},
+	{
+		"id": 1692114438004,
+		"title": "Producto 4",
+		"description": "Este es el producto 4",
+		"code": "4",
+		"price": 4,
+		"status": true,
+		"stock": 4,
+		"category": "4",
+		"thumbnails": [
+			"https://cdn.sparkfun.com//assets/parts/1/1/2/8/4/13750-01.jpg",
+			"https://cdn.sparkfun.com//assets/parts/1/1/2/8/4/13750-04.jpg",
+			"https://cdn.sparkfun.com//assets/parts/1/1/2/8/4/13750-03.jpg"
+		]
+	},
+	{
+		"id": 1692114438005,
+		"title": "Producto 5",
+		"description": "Este es el producto 5",
+		"code": "5",
+		"price": 5,
+		"status": true,
+		"stock": 5,
+		"category": "5",
+		"thumbnails": [
+			"https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-01.jpg",
+			"https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-04.jpg",
+			"https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-03.jpg"
+		]
+	},
+	{
+		"id": 1692114438006,
+		"title": "Producto 6",
+		"description": "Este es el producto 6",
+		"code": "6",
+		"price": 6,
+		"status": true,
+		"stock": 6,
+		"category": "6",
+		"thumbnails": [
+			"https://cdn.sparkfun.com//assets/parts/1/1/2/8/4/13750-01.jpg",
+			"https://cdn.sparkfun.com//assets/parts/1/1/2/8/4/13750-04.jpg",
+			"https://cdn.sparkfun.com//assets/parts/1/1/2/8/4/13750-03.jpg"
+		]
+	},
+	{
+		"id": 1692114438007,
+		"title": "Producto 7",
+		"description": "Este es el producto 7",
+		"code": "7",
+		"price": 7,
+		"status": true,
+		"stock": 7,
+		"category": "7",
+		"thumbnails": [
+			"https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-01.jpg",
+			"https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-04.jpg",
+			"https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-03.jpg"
+		]
+	},
+	{
+		"id": 1692114438008,
+		"title": "Producto 8",
+		"description": "Este es el producto 8",
+		"code": "8",
+		"price": 8,
+		"status": true,
+		"stock": 8,
+		"category": "8",
+		"thumbnails": [
+			"https://cdn.sparkfun.com//assets/parts/1/1/2/8/4/13750-01.jpg",
+			"https://cdn.sparkfun.com//assets/parts/1/1/2/8/4/13750-04.jpg",
+			"https://cdn.sparkfun.com//assets/parts/1/1/2/8/4/13750-03.jpg"
+		]
+	},
+	{
+		"id": 1692114438009,
+		"title": "Producto 9",
+		"description": "Este es el producto 9",
+		"code": "9",
+		"price": 9,
+		"status": true,
+		"stock": 9,
+		"category": "9",
+		"thumbnails": [
+			"https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-01.jpg",
+			"https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-04.jpg",
+			"https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-03.jpg"
+		]
+	},
+	{
+		"id": 1692114438010,
+		"title": "Producto 10",
+		"description": "Este es el producto 10",
+		"code": "10",
+		"price": 10,
+		"status": true,
+		"stock": 10,
+		"category": "10",
+		"thumbnails": [
+			"https://cdn.sparkfun.com//assets/parts/1/1/2/8/4/13750-01.jpg",
+			"https://cdn.sparkfun.com//assets/parts/1/1/2/8/4/13750-04.jpg",
+			"https://cdn.sparkfun.com//assets/parts/1/1/2/8/4/13750-03.jpg"
+		]
+	}
+]
